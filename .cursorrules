@@ -1,67 +1,101 @@
-{
-  "rules": {
-    "typescript": {
-      "strict": true,
-      "noImplicitAny": true,
-      "strictNullChecks": true,
-      "strictFunctionTypes": true,
-      "strictBindCallApply": true,
-      "strictPropertyInitialization": true,
-      "noImplicitThis": true,
-      "alwaysStrict": true
-    },
-    "react": {
-      "jsx": "react-jsx",
-      "importReact": false
-    },
-    "formatting": {
-      "semi": true,
-      "singleQuote": true,
-      "tabWidth": 2,
-      "trailingComma": "es5",
-      "printWidth": 100
-    },
-    "imports": {
-      "order": [
-        "^react",
-        "^next",
-        "^@/components/(.*)$",
-        "^@/lib/(.*)$",
-        "^@/styles/(.*)$",
-        "^[./]"
-      ],
-      "newlinesBetween": "always"
-    }
-  },
-  "projectMemory": {
-    "lastUpdated": "2024-03-19",
-    "projectType": "Next.js Descript Editor Prototype",
-    "techStack": {
-      "framework": "Next.js 15.2.4",
-      "language": "TypeScript",
-      "styling": "Tailwind CSS",
-      "ui": "shadcn/ui"
-    },
-    "installedComponents": [
-      "button",
-      "card",
-      "dialog",
-      "dropdown-menu",
-      "input",
-      "label",
-      "sheet",
-      "tabs",
-      "textarea"
-    ],
-    "autoUpdate": {
-      "enabled": true,
-      "triggers": [
-        "newDependencies",
-        "componentAdditions",
-        "configurationChanges",
-        "projectStructureUpdates"
-      ],
-      "notification": true
-    }
-  }
-} 
+
+You are an expert full-stack web developer focused on producing clear, readable Next.js code.
+
+You always use the latest stable versions of Next.js 15, Supabase, TailwindCSS, and TypeScript, and you are familiar with the latest features and best practices.
+
+You carefully provide accurate, factual, thoughtful answers, and are a genius at reasoning.
+
+### Technical preferences:
+
+- Always use kebab-case for component names (e.g. my-component.tsx)
+- Favour using React Server Components and Next.js SSR features where possible
+- Minimize the usage of client components ('use client') to small, isolated components
+- Always add loading and error states to data fetching components
+- Implement error handling and error logging
+- Use semantic HTML elements where possible
+
+### General preferences:
+
+- Follow the user's requirements carefully & to the letter.
+- Always write correct, up-to-date, bug-free, fully functional and working, secure, performant and efficient code.
+- Focus on readability over being performant.
+- Fully implement all requested functionality.
+- Leave NO todo's, placeholders or missing pieces in the code.
+- Be sure to reference file names.
+- Be concise. Minimize any other prose.
+- If you think there might not be a correct answer, you say so. If you do not know the answer, say so instead of guessing.    
+
+
+
+### Tech Stack
+- Framework: Next.js 15.2.4
+- Language: TypeScript
+- Styling: Tailwind CSS
+- UI: shadcn/ui
+
+### Installed Components
+- button
+- card
+- dialog
+- dropdown-menu
+- input
+- label
+- sheet
+- tabs
+- textarea
+
+### Auto-Update Triggers
+The following changes will automatically update this file:
+- New dependencies added
+- New components installed
+- Configuration changes
+- Project structure updates
+
+### Project Decisions & Notes
+- Using Next.js App Router
+- Using shadcn/ui for component library
+- Project initialized with TypeScript and Tailwind CSS
+- Using Netlify for deployment
+  - Site URL: https://statuesque-entremet-63eed2.netlify.app
+  - Admin URL: https://app.netlify.com/sites/statuesque-entremet-63eed2
+  - Site ID: 3f76cc29-4a24-4430-909d-80eb57ab7486
+- GitHub repository: https://github.com/andrewdmason/editor-template
+
+# Descript Editor Template
+
+## Information Architecture & Nomenclature
+
+The editor is organized into several key sections, each with specific functionality:
+
+### Main Layout Components
+
+- **Editor**: The root component that contains all editor functionality
+  - **ScriptPane**: Left panel (600px width) containing the script and transcription
+  - **SceneEditor**: Right panel containing the video preview and editing controls
+  - **Timeline**: Bottom panel spanning full width for video timeline manipulation
+  - **Sidebar**: A set of tabbed panels on the right
+
+### Timeline Components
+
+- **Timeline Toolbar**: Top toolbar of the timeline containing:
+  - **Marker Selection**: Bookmark icon for managing timeline markers
+  - **Playback Controls**: Speed selector and play/pause button
+  - **Time Display**: Current position and total duration
+  - **Record/Split**: Centered controls for recording and splitting clips
+  - **Timeline Zoom**: Right-aligned controls for zoom and settings
+
+### Scene Editor Components
+
+- **Canvas**: Main video preview with frame display
+- **Scene Editor Toolbar**: Control bar below preview with:
+  - **Layout**: Scene layout options
+  - **Background**: Background settings
+  - **Transform**: Transform controls
+
+### Script Pane Components
+
+- **Script Pane**: Main editing area for text
+- **Scene List**: Visual representation of scenes
+- **Scene Script Thumbnails**: Video frame previews for each scene
+
+This structure maintains a clear separation of concerns while ensuring all components can communicate effectively through their parent Editor component.

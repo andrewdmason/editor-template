@@ -1,10 +1,4 @@
-import { cn } from '@/lib/utils';
-
-interface TimelineProps {
-  className?: string;
-}
-
-export function Timeline({ className }: TimelineProps) {
+export function Timeline() {
   return (
     <div className="h-48 border-t bg-background">
       {/* Timeline controls */}
