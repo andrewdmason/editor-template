@@ -1,0 +1,67 @@
+{
+  "rules": {
+    "typescript": {
+      "strict": true,
+      "noImplicitAny": true,
+      "strictNullChecks": true,
+      "strictFunctionTypes": true,
+      "strictBindCallApply": true,
+      "strictPropertyInitialization": true,
+      "noImplicitThis": true,
+      "alwaysStrict": true
+    },
+    "react": {
+      "jsx": "react-jsx",
+      "importReact": false
+    },
+    "formatting": {
+      "semi": true,
+      "singleQuote": true,
+      "tabWidth": 2,
+      "trailingComma": "es5",
+      "printWidth": 100
+    },
+    "imports": {
+      "order": [
+        "^react",
+        "^next",
+        "^@/components/(.*)$",
+        "^@/lib/(.*)$",
+        "^@/styles/(.*)$",
+        "^[./]"
+      ],
+      "newlinesBetween": "always"
+    }
+  },
+  "projectMemory": {
+    "lastUpdated": "2024-03-19",
+    "projectType": "Next.js Descript Editor Prototype",
+    "techStack": {
+      "framework": "Next.js 15.2.4",
+      "language": "TypeScript",
+      "styling": "Tailwind CSS",
+      "ui": "shadcn/ui"
+    },
+    "installedComponents": [
+      "button",
+      "card",
+      "dialog",
+      "dropdown-menu",
+      "input",
+      "label",
+      "sheet",
+      "tabs",
+      "textarea"
+    ],
+    "autoUpdate": {
+      "enabled": true,
+      "triggers": [
+        "newDependencies",
+        "componentAdditions",
+        "configurationChanges",
+        "projectStructureUpdates"
+      ],
+      "notification": true
+    }
+  }
+} 
